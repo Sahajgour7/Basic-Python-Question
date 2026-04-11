@@ -1,0 +1,10 @@
+QUE. file containing no. seprated by commas print the count of even number.
+
+def count_even():
+    with open("demo.txt", "r") as f:
+        data = f.readline()
+        if (data % 2 == 0):
+            print("even")
+        return
+
+print(count_even())
