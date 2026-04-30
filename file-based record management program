@@ -1,0 +1,32 @@
+# Taking input
+
+print("1. Write")
+print("2. Search")
+print("3. Exit")
+
+input1 = input("Enter Your choise: ")
+
+
+
+if input1 == "1":
+    id_no = input("Enter Your ID: ")
+    name = input("Enter your name: ")
+    phone = input("Enter phone: ")
+    email = input("Enter email: ")
+    
+# STORING DATA : 
+    
+    line = id_no + "," + name + "," + phone + "," + email + "\n"
+    with open("detail.txt","a") as f:
+        f.write(line)
+
+elif input1 == "2":
+    search_id = input("Enter Your ID: ")
+    
+    with open("detail.txt","r") as f:
+        for line in f:
+            if search_id in line:
+                print(line)
+    
+elif input1 == "3":
+    print("EXIT!!")
